@@ -2,7 +2,6 @@
 import { createBrowserRouter , createRoutesFromElements , Route, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
-import SingleProduct from './pages/SingleProduct';
 
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
       <>
         <Route path='/' element={<Navbar />} >
           <Route index element={<Homepage />} />
-          <Route path='/single-product' element={<SingleProduct />} />
         </Route>
       </>
     )
