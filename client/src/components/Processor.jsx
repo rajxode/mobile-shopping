@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+// filter products on the basis of differnet operating system
 function Processor(props) {
 
   const { setPro } = props;

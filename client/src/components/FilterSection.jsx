@@ -6,6 +6,7 @@ import Processor from './Processor';
 import OperatingSystem from './OperatingSystem';
 import Brand from './Brand';
 
+// filter products on differnet basis
 function FilterSection(props) {
   
   const { setRam, setOs, setPro, setBrand} = props;

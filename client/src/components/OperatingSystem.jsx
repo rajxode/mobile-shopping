@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+
+// filter products on the basis of different opreating system 
 function OperatingSystem(props) {
 
   const { setOs } = props;

@@ -6,7 +6,7 @@ import { useSelector , useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { productSelector, setSearch } from '../reducer/productReducer';
 
-
+// link icon in navbar
 const MenuLink = styled.div`
     display:flex;
     cursor:pointer;
@@ -18,6 +18,7 @@ const MenuLink = styled.div`
 `;
 
 
+// render the navbar on top of website
 function Navbar() {
 
     const dispatch = useDispatch();
@@ -28,12 +29,16 @@ function Navbar() {
 
     return (
         <>
+            {/* navbar */}
             <div className='w-full h-[65px] bg-slate-100 flex justify-between md:justify-around 
                     px-[2%] md:px-[3%] lg:px-[5%] items-center relative'>
+                {/* brand name */}
                 <div className='text-xl font-semibold'>
                     Buy Phone
                 </div>
                 
+
+                {/* link for big screen */}
                 <div className='hidden w-1/2 h-full md:flex justify-around items-center'>
                     <MenuLink>
                         Home
@@ -55,7 +60,11 @@ function Navbar() {
                     </MenuLink>
                 </div>
                 
+
+                {/* tools for big screen */}
                 <div className='hidden w-1/5 lg:w-[15%] h-full md:flex justify-around items-center'>
+                    
+                    {/* search bar */}
                     <MenuLink className='relative h-full'>
                         <span onClick={(e) => setShowSearch(!showSearch)}>
                             {
@@ -96,12 +105,16 @@ function Navbar() {
                     </MenuLink>
                 </div>
                 
+
+                {/* menu link for small screen */}
                 <div className='md:hidden font-bold text-xl p-1 px-2 hover:bg-white rounded hover:shadow 
                         cursor-pointer'
                     onClick={(e) => setShowMenu(!showMenu)}>
                     <i class="fa-solid fa-list"></i>
                 </div>
                 
+
+                {/* show menu on small screen */}
                 {
                     showMenu
                     ?
@@ -112,6 +125,8 @@ function Navbar() {
                                 <i class="fa-solid fa-xmark"></i>
                             </span>
                         </div>
+
+                        {/* search bar */}
                         <div className="w-full bg-white shadow border flex justify-between p-2">
                             <input 
                                 type="text"
@@ -123,7 +138,8 @@ function Navbar() {
                             <button className='border-l px-2'>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            </div>
+                        </div>
+                        {/* links for small screen */}
                         <div className="w-full h-1/4 flex flex-col justify-around">
                             <MenuLink>
                                 Home

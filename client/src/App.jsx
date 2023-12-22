@@ -6,9 +6,12 @@ import Homepage from './pages/Homepage';
 
 function App() {
 
+  // routes 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
+      {/* homeroute  */}
+      {/* render navbar and homepage */}
         <Route path='/' element={<Navbar />} >
           <Route index element={<Homepage />} />
         </Route>
@@ -17,6 +20,7 @@ function App() {
   )
 
   return (
+    // router provider
     <RouterProvider router={router} />
   )
 }

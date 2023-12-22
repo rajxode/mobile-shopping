@@ -5,17 +5,19 @@ import FilterSection from '../components/FilterSection';
 import { getProductThunk, productSelector } from '../reducer/productReducer';
 import SingleProduct from '../components/SingleProduct';
 
+// homepage of website
 function Homepage() {
 
   const dispatch = useDispatch();
   const { products , search }  = useSelector(productSelector);
   
+  // filter properties
   const [ram,setRam] = useState('');
   const [os,setOs] = useState('');
   const [pro,setPro] = useState('');
   const [brand,setBrand] = useState('');
 
-
+  // get data from api on first render
   useEffect(() => {
     dispatch(getProductThunk());
   },[]);
@@ -24,13 +26,16 @@ function Homepage() {
   return (
     <div className='relative md:static w-full px-[2%] md:px-[3%] lg:px-[5%] flex justify-around py-[3%]'>
       
+      {/* side filter section on page */}
       <FilterSection setRam={setRam}
                     setBrand={setBrand}
                     setOs={setOs}
                     setPro={setPro} />
-      
+
+
       <div className='w-full md:w-[75%] flex flex-col'>
         
+        {/* show each product by appling filters */}
         <div className='w-full flex flex-wrap'>
           {
             products

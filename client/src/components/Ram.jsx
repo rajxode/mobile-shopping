@@ -1,6 +1,7 @@
 
 import React from 'react';
 
+// filter projects on the basis of different ram
 function Ram(props) {
 
   const {setRam} = props;

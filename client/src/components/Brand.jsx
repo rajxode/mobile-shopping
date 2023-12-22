@@ -3,6 +3,7 @@
 import React from 'react';
 
 
+// to render and filter product based on differnet brands
 function Brand(props) {
 
   const { setBrand } = props;
