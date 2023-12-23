@@ -1,6 +1,6 @@
 # Mobile-Shopping
 
-  This is a full stack application of an online mobile shopping website made using MERN STACK and styling using TailwindCSS. User can view multiple mobiles and can filter them on the basis of operating system, ram, processor, brand and can search for different products by their name.
+  This is a full stack application of an online mobile shopping website made using React and Node.js and styling using TailwindCSS. User can view multiple mobiles and can filter them on the basis of operating system, ram, processor, brand and can search for different products by their name.
   The backend is made using Node.js and ExpressJS and it returns a list of 20 mobile phones.
 
   ## Installation and Run:
